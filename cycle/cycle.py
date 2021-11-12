@@ -1,4 +1,4 @@
-﻿t=0 #количество чисел
+t=0 #количество чисел
 q=0 #int
 while t<1:
     t+=1
@@ -52,15 +52,52 @@ print("Nul:",0)
 loom=input("Купи слона")
 while loom.title()!="Слон":
     loom=input("Все говорят"+loom+"!А ты купи!!!")
- # Домашнее задание (на выбор?)
+ # Домашнее задание (на выбор)
     #9
-n=float(input('Кол-во лет: '))
 p=3
+n=float(input('Кол-во лет: '))
 s=float(input('Сумма на счету: '))
  
 for i in range(int(n)):
-    s += s * (p/100)
+    s+=s*(p/100)
 print(f"Через {int(n)} лет у тебя будет аж {s}, хватит на свидание и подарить агапчику билет в шашлычную.")
+#.
+a=int(input("Sisesta arv: "))
+for i in range(1,10):
+    print(Z,"*",i,"=",Z*i)
+#15
+for g in range(0,10,1):
+    for i in range(0,10,1):
+        print(i,end=" ")
+# Таблица умножения
+for g in range(0,10):
+  for i in range(0,10):
+      print(f"{(g*i):2}",end=" ")
+print()
+#16
+n=int(input("Введите число для столбика: "))
+for i in range(1, 11):
+    print(f"{i}*{n}={i*n}")
+#16
+for g in range(0,10,1):
+    for i in range(0,10,1):
+        if i==g:
+            print(i,end=" ")
+        else:
+            print("0",end=" ")
+#28
+import random
+n=random.randint(-10, 10)
+while True:
+    text=input("Число,стоп для выхода: ")
+    if text=="стоп":
+        print("Не фартануло, загадано было", n)
+        break 
+    elif int==n:
+        print("Победа")
+    else:
+        print("Попробуйте еще")
+
 
 
 
