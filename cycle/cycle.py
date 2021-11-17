@@ -87,16 +87,25 @@ for g in range(0,10,1):
             print("0",end=" ")
 #28
 import random
-n=random.randint(-10, 10)
-while True:
-    text=input("Число,стоп для выхода: ")
-    if text=="стоп":
-        print("Не фартануло, загадано было", n)
-        break 
-    elif int==n:
-        print("Победа")
+print("Привет, давай сыграем в игру! Набери число от 0 до 20. Посмотрим, угадаешь ли ты число или нет!")
+errors=0
+rand=random.randint(0, 20) 
+while errors<6:
+    chislo=input()
+    if chislo.isdigit():
+        chislo=int(chislo)
+        if chislo<rand:
+            print("Напиши число побольше!")
+        elif chislo>rand:
+            print("Напиши число поменьше!")
+        else:
+            print(f"Вау, ты угадал число, молодец!: {rand}!")
+            break
+        errors += 1
     else:
-        print("Попробуйте еще")
+        print("Ты как бы не то ввел))")
+else:
+    print(f"Число: {rand} ты не угадал, пробуй еще раз!")
 
 
 
