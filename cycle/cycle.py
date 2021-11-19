@@ -1,3 +1,91 @@
+#5
+S=int(input("Хочешь вычислить трапецию (Равнобедренную)? 1-Да 2-Нет"))
+if S==1:
+    a=0.0
+    while type(a)!=int and a<=0:
+        try:
+            a=int(input("A= "))
+        except ValueError:
+            print("Только цифры")
+    b=0.0
+    while type(b)!=int and b<=0:
+        try:
+            b=int(input("B= "))
+        except ValueError:
+            print("Только цифры")
+    h=0.0
+    while type(h)!=int and h<=0:
+        try:
+            h=int(input("H= "))
+        except ValueError:
+            print("Только цифры")
+    S=0.5*(a+b)*h
+    print("Площадь: ",S)
+    q=input("Ты закончил?")
+    if q!="Да" or "да": quit()
+elif S==2:
+    print("А, ну ок, пока")
+
+    
+
+#4
+from random import *
+M=randit(100,1000)
+print("Meie on kang:",M,"m")
+while M>0:
+    M=int(input("Mitu meetri tahad osta?"))
+    if M<m:
+        m-=M
+        print("Meil on jäänud: ",M,"m")
+    else:
+        v=input("Kas tahad jääk osta?")
+        if v=="jah":
+            print("Kang on teie oma!")
+            M=0
+        else:
+            print("Ei taha, siis ei taha!")
+print("Pood on tühi!", M)
+
+km=s_pikkus=10
+print("1. esimesel päeval pikkus oli ",km)
+print("terve tee pikkus oli ",round(s_pikkus,2))
+for d in range(2,8):
+    km*=1.1
+    print(". päeval pikkus oli ",round(km,2))
+    s_pikkus+=km
+    print("terve tee pikkus oli ",round(s_pikkus,2))
+    #3
+   
+
+ask_p=ask_n=""
+while type(ask_p)!=int:
+    try:
+        ask_p=int(input("Сколько чисел ты хочешь ввести? "))
+    except ValueError:
+        print("Только цифры")
+
+if ask_p>0:
+    while type(ask_p)!=int:
+    try:
+        ask_p=int(input("Какое число ты хочешь написать? "))
+    except ValueError:
+        print("Только цифры")
+        ask_n=int(input("Цифра"))
+        ask_p-=1
+        max=ask_n
+    while ask_p>0:
+        while type(ask_n)!=int:
+     try:
+        ask_p=int(input("Сколько чисел ты хочешь ввести? "))
+    except ValueError:
+        print("Только цифры")
+        ask_n=int(input("Цифра"))
+        ask_p-=1
+if ask_n>max: max=ask_n
+     print("Максимальное число найдено")
+else:
+     print("не найдено максимальное число")
+ #1
 t=0 #количество чисел
 q=0 #int
 while t<1:
@@ -87,26 +175,25 @@ for g in range(0,10,1):
             print("0",end=" ")
 #28
 import random
-print("Привет, давай сыграем в игру! Набери число от 0 до 20. Посмотрим, угадаешь ли ты число или нет!")
+print("Привет, давай сыграем в игру! Набери число от 0 до 20. Посмотрим, угадаешь ли ты число или нет.")
 errors=0
 rand=random.randint(0, 20) 
 while errors<6:
-    chislo=input()
-    if chislo.isdigit():
-        chislo=int(chislo)
-        if chislo<rand:
-            print("Напиши число побольше!")
-        elif chislo>rand:
-            print("Напиши число поменьше!")
+    number=input()
+    if number.isdigit():
+        number=int(number)
+        if number<rand:
+            print("Напиши число побольше")
+        elif number>rand:
+            print("Напиши число поменьше")
         else:
-            print(f"Вау, ты угадал число, молодец!: {rand}!")
+            print(f"Красавчик... число было: {rand}!")
             break
         errors += 1
     else:
         print("Ты как бы не то ввел))")
 else:
-    print(f"Число: {rand} ты не угадал, пробуй еще раз!")
-
+    print(f"Число было: {rand}, не фортануло, еще раз пробуй!")
 
 
 
